@@ -1,0 +1,44 @@
+# Clustering configuration
+data:
+  feature_preparation_required: False
+
+random_seed:
+  base_seed: 4
+
+clustering:  
+  # Clustering methods to apply
+  methods: ['KMeans', 'Hierarchical', 'DBSCAN', 'GMM', 'Spectral']
+  
+  # Default number of clusters (for methods that require it)
+  num_clusters: 2
+  
+  # Parameters for each clustering method
+  parameters:
+    # K-Means clustering
+    KMeans:
+      n_clusters: 2
+      n_init: 10
+      max_iter: 300
+      
+    # Hierarchical clustering
+    Hierarchical:
+      n_clusters: 2
+      linkage: 'ward'
+      
+    # DBSCAN clustering (density-based)
+    DBSCAN:
+      eps: 0.5
+      min_samples: 5
+      
+    # Gaussian Mixture Model
+    GMM:
+      n_components: 2
+      covariance_type: 'full'
+      max_iter: 100
+      init_param_method: "random_from_data"
+      
+    # Spectral clustering
+    Spectral:
+      n_clusters: 2
+      affinity: 'rbf'
+      gamma: 1.0

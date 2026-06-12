@@ -1,0 +1,5 @@
+data:
+  training_start_end_lookup_period: 12
+PCA:
+  max_n_components: 20
+  variance_threshold: 0.90

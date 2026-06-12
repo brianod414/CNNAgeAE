@@ -1,0 +1,42 @@
+
+# optimisation and training parameters for autoencoder models
+training:
+  epochs: 100
+  cv_splits: 10
+  n_trials: 100
+  standardisation_method: 'global'
+  validation_data_percentage: 0.1
+
+data:
+  period_names: ['start', 'end']
+
+# alternatively specify model architecture and training parameters directly
+models:
+  Conv1D:
+    learning_rate: none #0.01
+    num_layers: none #1
+    encoding_dim: none #10  # Encoding dimension for Conv1D
+  
+  Conv2D:
+    learning_rate: none #0.01
+    num_layers: none #1
+    encoding_dim: none #15  # Encoding dimension for Conv2D
+
+  LSTM:
+    learning_rate: none #0.1
+    num_layers: none #1
+    encoding_dim: none #20  # Encoding dimension for LSTM
+
+
+# Batch training configuration
+batch_training:
+  enabled: true
+  train_batch_size: 32
+  test_batch_size: 16
+  train_shuffle: true
+  test_shuffle: false
+
+random_seed:
+  base_seed: 4
+
+

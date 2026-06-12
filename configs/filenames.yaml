@@ -1,0 +1,27 @@
+# Data configuration
+model_selection:
+  training_filename: FILENAME
+  test_filename: FILENAME
+  period_names: ['start', 'end']
+model_training:
+  training_filename: FILENAME
+feature_extraction:
+  training_filename: FILENAME
+  test_filename: FILENAME
+feature_extraction_AE_age:
+  test_filename: FILENAME
+  training_filename: FILENAME
+model_selection_age_AE:
+  training_filename: FILENAME
+fine_tuning:
+  training_filename: FILENAME
+PCA:
+  training_filename: FILENAME
+  test_filename: FILENAME
+summary_stats:
+  training_filename: FILENAME
+  test_filename: FILENAME
+pre_training_clusters: 
+  training_filename: FILENAME
+clustering:
+  test_filename: FILENAME
