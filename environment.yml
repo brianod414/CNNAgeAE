@@ -1,0 +1,15 @@
+name: CNNAgeAE
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - numpy==2.3.2
+      - pyyaml==6.0.2
+      - scikit-learn==1.7.1
+      - scipy==1.16.1
+      - torch
+      - torchvision
+      - omegaconf==2.3.5
